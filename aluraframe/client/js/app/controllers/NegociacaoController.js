@@ -15,9 +15,7 @@ class NegociacaoController {
     let data = new Date(
       ...this._inputData.value
              .split('-')
-             .map(function(item, index){
-                  return item - index % 2;
-             })
+             .map((item, index) => item - index % 2)
     )
 
     let negociacao = new Negociacao(
